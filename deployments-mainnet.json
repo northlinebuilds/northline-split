@@ -1,0 +1,25 @@
+{
+  "network": "Arc mainnet",
+  "chainId": 5042,
+  "explorer": "https://explorer.arc.io",
+  "usdcErc20": "0x3600000000000000000000000000000000000000",
+  "contracts": {
+    "SplitVault": {
+      "address": "0x3E0f8d599987DB403dDad11B7Ddb9679E18fD661",
+      "deployTx": "0xd9651002c0ec42d03a2470643afb76e9eae1f3cf3cd087713773e6f21aa1c836",
+      "deployBlock": 28689875,
+      "deployer": "0xFe5D81D8268CBaC025829CEdD11D5cF6962d4096",
+      "payees": [
+        { "address": "0xFe5D81D8268CBaC025829CEdD11D5cF6962d4096", "shareBps": 6000, "role": "operating wallet" },
+        { "address": "0xD4F04c07037c42F84e5B15A7843e58e1C6FccC96", "shareBps": 4000, "role": "x402 API revenue wallet" }
+      ]
+    }
+  },
+  "launchTransactions": [
+    { "step": "deploy", "tx": "0xd9651002c0ec42d03a2470643afb76e9eae1f3cf3cd087713773e6f21aa1c836", "block": 28689875 },
+    { "step": "approve 0.50 USDC", "tx": "0xbc5b485d0b0b56a3b44674aa9aa73e86e64916cdb10fa0b5ab1c2384a7043a7e", "block": 28689879 },
+    { "step": "pay 0.50 USDC, memo \"Northline Split launch\"", "tx": "0xc0dcc6339292bda64f56a9ccc0ae3e38b18f1f1d054d998fbc96f979c4fe3bc8", "block": 28689883 },
+    { "step": "release 0.30 USDC to operating wallet", "tx": "0xa429427a320934cf9c08aa96a74bf6a4b9f3e113d079da412e2b4088ed202bc3", "block": 28689886 },
+    { "step": "release 0.20 USDC to revenue wallet", "tx": "0xfd5397b8260369a8840713e901b46f4a892326e078a35f0ccaa7318ee6a83b05", "block": 28689934 }
+  ]
+}

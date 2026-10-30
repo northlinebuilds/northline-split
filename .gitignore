@@ -7,3 +7,8 @@ broadcast/*/*/dry-run/
 .env
 .wrangler/
 secrets/
+
+# local artifacts
+video/
+ffmpeg.pid
+broadcast/*/5042/dry-run/

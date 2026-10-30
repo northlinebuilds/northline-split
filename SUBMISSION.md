@@ -3,8 +3,14 @@
 **One line:** An immutable USDC revenue splitter on Arc: one address takes payments with a memo, each payee pulls exactly their share. No owner, no admin, no upgrade path.
 
 - Live app (Arc mainnet): https://northline-split.pages.dev
-- Mainnet vault: `<VAULT_ADDRESS>` — https://explorer.arc.io/address/<VAULT_ADDRESS>
-- Launch payment tx: `<PAY_TX>` · releases: `<RELEASE_MAIN_TX>`, `<RELEASE_REVENUE_TX>`
+- Mainnet vault (chain 5042): `0x3E0f8d599987DB403dDad11B7Ddb9679E18fD661` — https://explorer.arc.io/address/0x3E0f8d599987DB403dDad11B7Ddb9679E18fD661
+- Deploy tx: https://explorer.arc.io/tx/0xd9651002c0ec42d03a2470643afb76e9eae1f3cf3cd087713773e6f21aa1c836
+- Approve tx: https://explorer.arc.io/tx/0xbc5b485d0b0b56a3b44674aa9aa73e86e64916cdb10fa0b5ab1c2384a7043a7e
+- Launch payment (0.50 USDC, memo "Northline Split launch"): https://explorer.arc.io/tx/0xc0dcc6339292bda64f56a9ccc0ae3e38b18f1f1d054d998fbc96f979c4fe3bc8
+- Release, operating wallet (0.30 USDC): https://explorer.arc.io/tx/0xa429427a320934cf9c08aa96a74bf6a4b9f3e113d079da412e2b4088ed202bc3
+- Release, revenue wallet (0.20 USDC): https://explorer.arc.io/tx/0xfd5397b8260369a8840713e901b46f4a892326e078a35f0ccaa7318ee6a83b05
+- Live vault view: https://northline-split.pages.dev/?split=0x3E0f8d599987DB403dDad11B7Ddb9679E18fD661
+- Demo video: VIDEO_URL_PLACEHOLDER
 - Repo (MIT): https://github.com/northlinebuilds/northline-split
 - Arc Studio project: https://studio.arc.io/app/d72f3f10-fe99-4125-abc1-ef6a2b271d18
 - Builder: Northline (northlinebuilds)
