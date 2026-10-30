@@ -4,6 +4,15 @@ A USDC revenue splitter for AI agents and small teams on Arc. Create a split wit
 
 Built with [Arc Studio](https://studio.arc.io)
 
+## Live on Arc mainnet
+
+- **App:** https://northline-split.pages.dev
+- **Demo video (73 s):** https://northline-split.pages.dev/demo.mp4 · also attached to the [v1.0.0 release](https://github.com/northlinebuilds/northline-split/releases/tag/v1.0.0)
+- **Launch vault:** [`0x3E0f8d599987DB403dDad11B7Ddb9679E18fD661`](https://explorer.arc.io/address/0x3E0f8d599987DB403dDad11B7Ddb9679E18fD661) (chain 5042, source verified on [Sourcify](https://repo.sourcify.dev/5042/0x3E0f8d599987DB403dDad11B7Ddb9679E18fD661), exact match) — [open it in the app](https://northline-split.pages.dev/?split=0x3E0f8d599987DB403dDad11B7Ddb9679E18fD661)
+- **Launch payment:** [0.50 USDC with memo "Northline Split launch"](https://explorer.arc.io/tx/0xc0dcc6339292bda64f56a9ccc0ae3e38b18f1f1d054d998fbc96f979c4fe3bc8), released [0.30](https://explorer.arc.io/tx/0xa429427a320934cf9c08aa96a74bf6a4b9f3e113d079da412e2b4088ed202bc3) / [0.20](https://explorer.arc.io/tx/0xfd5397b8260369a8840713e901b46f4a892326e078a35f0ccaa7318ee6a83b05) USDC
+- **Arc Studio project:** https://studio.arc.io/app/d72f3f10-fe99-4125-abc1-ef6a2b271d18
+- Full record: [`deployments-mainnet.json`](deployments-mainnet.json)
+
 ## What you can do
 
 - Create a split from your wallet: payee addresses and percentages that total 100%. Shares cannot be changed afterwards and there is no owner or admin.

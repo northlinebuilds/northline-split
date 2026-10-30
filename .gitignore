@@ -12,3 +12,4 @@ secrets/
 video/
 ffmpeg.pid
 broadcast/*/5042/dry-run/
+DORAHACKS_FORM.md

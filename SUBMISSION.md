@@ -10,7 +10,8 @@
 - Release, operating wallet (0.30 USDC): https://explorer.arc.io/tx/0xa429427a320934cf9c08aa96a74bf6a4b9f3e113d079da412e2b4088ed202bc3
 - Release, revenue wallet (0.20 USDC): https://explorer.arc.io/tx/0xfd5397b8260369a8840713e901b46f4a892326e078a35f0ccaa7318ee6a83b05
 - Live vault view: https://northline-split.pages.dev/?split=0x3E0f8d599987DB403dDad11B7Ddb9679E18fD661
-- Demo video: VIDEO_URL_PLACEHOLDER
+- Demo video (73 s): https://northline-split.pages.dev/demo.mp4 (also on the release: https://github.com/northlinebuilds/northline-split/releases/tag/v1.0.0)
+- Source verified on Sourcify (exact match): https://repo.sourcify.dev/5042/0x3E0f8d599987DB403dDad11B7Ddb9679E18fD661
 - Repo (MIT): https://github.com/northlinebuilds/northline-split
 - Arc Studio project: https://studio.arc.io/app/d72f3f10-fe99-4125-abc1-ef6a2b271d18
 - Builder: Northline (northlinebuilds)
