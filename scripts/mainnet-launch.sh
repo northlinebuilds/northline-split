@@ -10,7 +10,7 @@ export PATH="$HOME/.local/bin:$PATH"
 RPC=https://rpc.mainnet.arc.io
 MAIN=0xFe5D81D8268CBaC025829CEdD11D5cF6962d4096
 REVENUE=0xD4F04c07037c42F84e5B15A7843e58e1C6FccC96
-SECRETS="${SECRETS:-/workspace/earn-5900/agent-run/secrets/crypto-wallets.json}"
+SECRETS="${SECRETS:-./secrets/wallets.json}"
 [ "$(arc-cast chain-id --rpc-url $RPC)" = 5042 ] || { echo "RPC is not Arc mainnet"; exit 1; }
 echo "MAIN    $(arc-cast balance $MAIN --rpc-url $RPC --ether) USDC"
 echo "REVENUE $(arc-cast balance $REVENUE --rpc-url $RPC --ether) USDC"

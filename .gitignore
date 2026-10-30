@@ -6,3 +6,4 @@ cache/
 broadcast/*/*/dry-run/
 .env
 .wrangler/
+secrets/
