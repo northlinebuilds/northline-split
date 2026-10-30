@@ -19,7 +19,7 @@ Payments must go through the app (or the contract's `pay` function). USDC sent t
 - React, Vite, TypeScript, Tailwind CSS
 - wagmi, viem, ConnectKit
 - Solidity 0.8.28 with Foundry and OpenZeppelin
-- Network: Arc Testnet, USDC
+- Network: Arc mainnet (chain 5042) by default; Arc Testnet (5042002) via `?network=testnet` or `VITE_ARC_NETWORK=testnet`. USDC ERC-20 interface `0x3600…0000` (6 decimals; native gas balance is the same USDC at 18 decimals)
 
 ## Development
 
@@ -38,3 +38,19 @@ If you change `contracts/SplitVault.sol`, rebuild and regenerate `src/lib/splitV
 ### Environment variables
 
 None.
+
+## Live
+
+- App (Arc mainnet): https://northline-split.pages.dev
+- Arc Testnet view: https://northline-split.pages.dev/?network=testnet
+
+## Mainnet launch
+
+`scripts/mainnet-launch.sh` deploys a SplitVault (60/40 split), approves and pays 0.50 USDC with memo
+"Northline Split launch", and has both payees release their share. Without `CONFIRM=broadcast` it only simulates
+(`contracts/script/MainnetLaunch.s.sol`). Simulation needs [Arc Foundry](https://docs.arc.io/arc/tutorials/install-arc-foundry)
+(`arc-forge`), because stock Foundry cannot execute Arc's USDC blocklist precompile.
+
+## License
+
+MIT

@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
+import { NETWORK_LABEL } from '@/lib/network'
 import type { Address } from 'viem'
 import { useQueryClient } from '@tanstack/react-query'
 import { ArrowLeft, Check, Copy, ExternalLink } from 'lucide-react'
@@ -62,7 +63,7 @@ export function SplitView({ address, onBack }: { address: Address; onBack: () =>
         <section className="card p-6">
           <h2 className="display text-xl font-semibold">No split found here</h2>
           <p className="mt-1 text-sm" style={{ color: 'var(--muted)' }}>
-            <span className="mono">{shortAddress(address)}</span> is not a Northline split on Arc Testnet, or the network did not respond.
+            <span className="mono">{shortAddress(address)}</span> is not a Northline split on {NETWORK_LABEL}, or the network did not respond.
           </p>
           <div className="mt-4 flex gap-2">
             <button className="btn-primary min-h-11 px-5 text-sm" onClick={() => void split.refetch()}>
@@ -93,7 +94,7 @@ export function SplitView({ address, onBack }: { address: Address; onBack: () =>
                 </span>
               </div>
               <div className="mt-2 text-sm tabular-nums" style={{ color: 'var(--muted)' }}>
-                {data ? `${formatUsdcAmount(data.totalReleased)} released · ${formatUsdcAmount(unreleased)} in the vault` : 'Reading from Arc Testnet…'}
+                {data ? `${formatUsdcAmount(data.totalReleased)} released · ${formatUsdcAmount(unreleased)} in the vault` : `Reading from ${NETWORK_LABEL}…`}
               </div>
 
               <div className="mt-5 flex items-center gap-2 rounded-2xl p-3" style={{ background: 'var(--surface-strong)' }}>

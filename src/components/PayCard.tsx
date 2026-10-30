@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { IS_TESTNET, NETWORK_LABEL } from '@/lib/network'
 import { erc20Abi, type Address } from 'viem'
 import { useAccount, usePublicClient, useReadContract, useWriteContract } from 'wagmi'
 import { ConnectKitButton } from 'connectkit'
@@ -66,7 +67,7 @@ export function PayCard({ vault }: { vault: Address }) {
   const send = async (kind: 'approve' | 'pay') => {
     if (raw === null || !client) return
     if (!(await ensure())) {
-      toast.error('Switch your wallet to Arc Testnet to continue.')
+      toast.error(`Switch your wallet to ${NETWORK_LABEL} to continue.`)
       return
     }
     setStage(kind === 'approve' ? 'approve-wallet' : 'pay-wallet')
@@ -200,9 +201,15 @@ export function PayCard({ vault }: { vault: Address }) {
       {balance.data === 0n && (
         <p className="mt-2 text-xs" style={{ color: 'var(--subtle)' }}>
           No USDC in this wallet.{' '}
-          <a className="underline" href="https://faucet.circle.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--focus)' }}>
-            Get test USDC
-          </a>
+          {IS_TESTNET ? (
+            <a className="underline" href="https://faucet.circle.com" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--focus)' }}>
+              Get test USDC
+            </a>
+          ) : (
+            <a className="underline" href="https://docs.arc.network/arc/references/connect-to-arc" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--focus)' }}>
+              Add USDC on Arc
+            </a>
+          )}
         </p>
       )}
       {lastHash && (

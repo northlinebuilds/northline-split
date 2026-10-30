@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { NETWORK_LABEL } from '@/lib/network'
 import { isAddress, type Address } from 'viem'
 import { useAccount, useDeployContract, useWaitForTransactionReceipt } from 'wagmi'
 import { ConnectKitButton } from 'connectkit'
@@ -80,7 +81,7 @@ export function CreateSplit({ onCreated }: { onCreated: (address: Address) => vo
   const submit = async () => {
     if (!parsed.valid) return
     if (!(await ensure())) {
-      toast.error('Switch your wallet to Arc Testnet to continue.')
+      toast.error(`Switch your wallet to ${NETWORK_LABEL} to continue.`)
       return
     }
     try {

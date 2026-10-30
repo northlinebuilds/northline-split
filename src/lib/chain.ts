@@ -1,9 +1,9 @@
 import type { Address } from 'viem'
-import { arcTestnet } from 'viem/chains'
+import { ARC_CHAIN } from '@/lib/network'
 import { buildAddressExplorerUrl, buildTxExplorerUrl, getUsdc, requireChain } from '@/onchain-facts'
 import { Amount, formatAmount, usdcDecimalsFor } from '@/onchain-money'
 
-export const CHAIN_ID = arcTestnet.id
+export const CHAIN_ID = ARC_CHAIN.id
 export const CHAIN = requireChain(CHAIN_ID)
 
 const usdcFact = getUsdc(CHAIN_ID)

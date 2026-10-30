@@ -1,4 +1,5 @@
 import { ArrowDownLeft, ArrowUpRight, ExternalLink, Loader2 } from 'lucide-react'
+import { NETWORK_LABEL } from '@/lib/network'
 import type { Address } from 'viem'
 import { addressUrl, formatUsdcAmount, shortAddress, txUrl } from '@/lib/chain'
 import { useActivity } from '@/hooks/useActivity'
@@ -93,7 +94,7 @@ export function ActivityFeed({ vault, startBlock, onNewEvents }: Props) {
         <span>
           {oldestBlock !== null && headBlock !== null
             ? `Scanned blocks ${oldestBlock.toLocaleString('en-US')} to ${headBlock.toLocaleString('en-US')}`
-            : 'Connecting to Arc Testnet…'}
+            : `Connecting to ${NETWORK_LABEL}…`}
           {reachedStart ? ' (since creation)' : ''}
         </span>
         {!reachedStart && oldestBlock !== null && (

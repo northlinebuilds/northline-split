@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { NETWORK_LABEL } from '@/lib/network'
 import { useAccount, usePublicClient, useWriteContract } from 'wagmi'
 import { useQueryClient } from '@tanstack/react-query'
 import { ExternalLink, Loader2 } from 'lucide-react'
@@ -21,7 +22,7 @@ export function PayeesList({ split }: { split: SplitState }) {
   const release = async (vault: Address, amount: bigint) => {
     if (!client) return
     if (!(await ensure())) {
-      toast.error('Switch your wallet to Arc Testnet to continue.')
+      toast.error(`Switch your wallet to ${NETWORK_LABEL} to continue.`)
       return
     }
     setReleasing('wallet')

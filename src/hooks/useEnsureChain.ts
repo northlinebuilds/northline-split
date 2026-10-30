@@ -1,7 +1,7 @@
 import { useAccount, useSwitchChain } from 'wagmi'
 import { CHAIN_ID } from '@/lib/chain'
 
-/** Guards writes: resolves true once the wallet is on Arc Testnet, switching it when needed. */
+/** Guards writes: resolves true once the wallet is on the configured Arc network, switching it when needed. */
 export function useEnsureChain() {
   const { chainId, isConnected } = useAccount()
   const { switchChainAsync, isPending } = useSwitchChain()
